@@ -18,7 +18,8 @@
     <modules>
         <module>merchandise-item</module>
         <module>merchandise-order</module>
-        <module>eureka-servier</module>
+        <module>eureka-servier-1</module>
+        <module>eureka-servier-2</module>
     </modules>
 
     <properties>

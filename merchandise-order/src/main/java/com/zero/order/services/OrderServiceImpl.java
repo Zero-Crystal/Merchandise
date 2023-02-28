@@ -16,24 +16,43 @@ public class OrderServiceImpl implements OrderService{
     private ItemServiceImpl itemService;
 
     static {
-        Order order = new Order();
-        order.setOrderId("2023022401");
-        order.setCreateDate(new Date());
-        order.setUpdateDate(order.getCreateDate());
-        order.setUserId(1l);
-        List<OrderDetail> orderDetails = new ArrayList<>();
+        //Order1
+        Order order1 = new Order();
+        order1.setOrderId("2023022401");
+        order1.setCreateDate(new Date());
+        order1.setUpdateDate(order1.getCreateDate());
+        order1.setUserId(1l);
+        List<OrderDetail> orderDetails1 = new ArrayList<>();
 
         Item item1 = new Item();
         item1.setId(1l);
-        orderDetails.add(new OrderDetail(order.getOrderId(), item1));
+        orderDetails1.add(new OrderDetail(order1.getOrderId(), item1));
 
         Item item2 = new Item();
         item2.setId(2l);
-        orderDetails.add(new OrderDetail(order.getOrderId(), item2));
+        orderDetails1.add(new OrderDetail(order1.getOrderId(), item2));
 
-        order.setOrderDetails(orderDetails);
+        order1.setOrderDetails(orderDetails1);
+        orderMap.put(order1.getOrderId(), order1);
 
-        orderMap.put(order.getOrderId(), order);
+        //Order2
+        Order order2= new Order();
+        order2.setOrderId("2023022402");
+        order2.setCreateDate(new Date());
+        order2.setUpdateDate(order2.getCreateDate());
+        order2.setUserId(2l);
+        List<OrderDetail> orderDetails2 = new ArrayList<>();
+
+        Item item3 = new Item();
+        item3.setId(3l);
+        orderDetails2.add(new OrderDetail(order2.getOrderId(), item3));
+
+        Item item4 = new Item();
+        item4.setId(4l);
+        orderDetails2.add(new OrderDetail(order2.getOrderId(), item4));
+
+        order2.setOrderDetails(orderDetails2);
+        orderMap.put(order2.getOrderId(), order2);
     }
 
     /**

@@ -19,7 +19,6 @@ public class ItemServiceImpl implements ItemService{
     public Item findItemById(Long id) {
         String itemUrl = "http://merchandise-item/findItem/{id}";
         Item result = restTemplate.getForObject(itemUrl, Item.class, id);
-        System.out.print("订单系统调用商品微服务：------------------> " + result);
         return result;
     }
 }
